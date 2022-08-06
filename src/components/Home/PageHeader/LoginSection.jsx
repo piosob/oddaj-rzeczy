@@ -1,22 +1,9 @@
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { Link } from "react-router-dom";
 import AuthContex from "../../store/auth-contex";
-
 import Button from "../../UI/Button/Button";
 import classes from "./LoginSection.module.scss";
-
-const UserInfo = () => {
-  const authCtx = useContext(AuthContex);
-
-  return (
-    <div>
-      <h3></h3>
-      <h4></h4>
-    </div>
-  );
-};
 
 const LoginSection = () => {
   const authCtx = useContext(AuthContex);
