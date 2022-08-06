@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 let logoutTimer;
 
 const AuthContex = React.createContext({
@@ -35,7 +35,7 @@ const retrieveStoredToken = () => {
 }
 
 export const AuthContexProvider = props => {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const tokenData = retrieveStoredToken();
   let initialToken;
   if (tokenData) {
@@ -53,7 +53,7 @@ export const AuthContexProvider = props => {
     if (logoutTimer) {
       clearTimeout(logoutTimer)
     }
-    navigate("/wylogowano", { replace: true });
+    // navigate("/wylogowano", { replace: true });
   }
 
 

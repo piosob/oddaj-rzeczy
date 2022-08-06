@@ -7,6 +7,7 @@ const Button = (props) => {
     props.handleSubmit && props.handleSubmit(event);
     props.onTest && props.onTest();
     props.onLogout && props.onLogout();
+    props.onLogoutNavigate && props.onLogoutNavigate();
   };
 
   return (

@@ -56,6 +56,7 @@ const LogIn = (props) => {
           const expirationTime = new Date(
             new Date().getTime() + +result.expiresIn * 1000
           );
+          console.log(result);
           authCtx.onLogin(result.idToken, result.email, expirationTime);
         })
         .catch((error) => console.log(error));

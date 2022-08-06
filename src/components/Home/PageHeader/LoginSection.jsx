@@ -1,12 +1,16 @@
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContex from "../../store/auth-contex";
 import Button from "../../UI/Button/Button";
 import classes from "./LoginSection.module.scss";
 
 const LoginSection = () => {
+  let navigate = useNavigate();
   const authCtx = useContext(AuthContex);
+  const onLogoutNavigate = () => {
+    navigate("/wylogowano", { replace: true });
+  };
   return (
     <aside className={classes["login-btns-container"]}>
       {authCtx.isLoggedIn && (
@@ -30,7 +34,9 @@ const LoginSection = () => {
         </Button>
       )}
       {authCtx.isLoggedIn && (
-        <Button onLogout={authCtx.onLogOut}>Wyloguj!</Button>
+        <Button onLogout={authCtx.onLogOut} onLogoutNavigate={onLogoutNavigate}>
+          Wyloguj!
+        </Button>
       )}
     </aside>
   );
