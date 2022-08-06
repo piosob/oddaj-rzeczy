@@ -1,0 +1,87 @@
+@use '../../../scss/abstract/'as a;
+
+.container {
+  min-width: 50%;
+  color: a.$gray;
+  gap: 2em;
+}
+
+.container,
+.form {
+  @include a.flex(column, flex-start, center);
+}
+
+.form {
+  gap: 1em;
+  min-width: 75%;
+}
+
+.nameEmailInputArea {
+  min-width: 100%;
+  @include a.flex();
+}
+
+.errorDescription {
+  color: red;
+}
+
+.successDescription {
+  color: green;
+  font-weight: bold;
+
+  span {
+    display: block;
+  }
+}
+
+
+.heading {
+  font-size: a.$f38;
+  text-align: center;
+  letter-spacing: -0.76px;
+}
+
+.label-text-area {
+  font-size: a.$f16;
+  font-weight: 700;
+  letter-spacing: 0px;
+  padding: 1em;
+  width: 100%;
+}
+
+.text-area {
+  display: block;
+  width: 100%;
+  min-height: 50%;
+  border: none;
+  border-bottom: 1px solid a.$gray;
+  padding: .5em 0;
+  font-family: a.$font-base;
+  font-size: a.$f18;
+  font-weight: 300;
+  resize: none;
+
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: a.$f18;
+    color: a.$place-holder;
+    font-weight: 400;
+
+  }
+}
+
+.submit-button {
+  align-self: flex-end;
+  font-size: a.$f18;
+  font-weight: 300;
+  padding: .5em 2em;
+}
+
+
+.inputInvalid {
+  border-bottom: 1px solid red;
+}

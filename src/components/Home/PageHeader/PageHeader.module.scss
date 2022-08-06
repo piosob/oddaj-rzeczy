@@ -1,0 +1,16 @@
+@use "../../../scss/abstract/"as a;
+
+.pageHeader {
+  @media (min-width: a.$mobile-main) {
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // gap: 1em;
+    @include a.flex(column, space-between, flex-start);
+    position: absolute;
+    margin-top: 2em;
+    top: 0;
+    left: 55%;
+    right: 10%;
+  }
+
+}

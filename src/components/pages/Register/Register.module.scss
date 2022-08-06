@@ -1,0 +1,27 @@
+@use "../../../scss/abstract/"as a;
+
+.label {
+  max-width: 100%;
+  display: block;
+  font-size: a.$f16;
+  color: a.$gray;
+
+}
+
+.input {
+  max-width: 100%;
+  padding: 0;
+  background: none;
+}
+
+.error-description {
+  font-weight: bold;
+  color: red;
+  padding-left: 1em;
+}
+
+.successDescription {
+  color: green;
+  font-weight: bold;
+  padding-left: 1em;
+}

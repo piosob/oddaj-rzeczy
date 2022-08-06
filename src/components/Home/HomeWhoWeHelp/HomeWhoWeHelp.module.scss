@@ -1,0 +1,47 @@
+@use '../../../scss/abstract/'as a;
+
+.who-we-help-container {
+  margin: 1em 0;
+  grid-column: 3/10;
+  grid-row: 6/7;
+  text-align: center;
+  color: a.$gray;
+}
+
+.header,
+.contentWhoWeHelp {
+  @media (min-width: a.$mobile-main) {
+    @include a.flex(column, center, center);
+    gap: 1em;
+  }
+}
+
+.heading {
+  font-size: a.$f38;
+  letter-spacing: -0.76px;
+
+
+}
+
+.actions-btns {
+  @media (min-width: a.$mobile-main) {
+    @include a.flex(row, space-between, stretch);
+    gap: 1em;
+  }
+}
+
+.btn {
+  padding: 1em 1.75em;
+  font-size: a.$f24;
+  border: none;
+}
+
+.active-btn {
+  border: 1px solid a.$gray;
+
+}
+
+.span {
+  display: block;
+  line-height: 0.75em;
+}

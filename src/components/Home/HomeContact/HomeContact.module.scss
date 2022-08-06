@@ -1,0 +1,39 @@
+@use '../../../scss/abstract/'as a;
+
+.container {
+  @media (min-width: a.$mobile-main) {
+
+    @include a.flex(row, space-between, center);
+    gap: 2em;
+    margin: 1em;
+    grid-row: 7/8;
+    grid-column: 1/-1;
+  }
+
+  margin: 1em 0;
+}
+
+.heroImg {
+  @media (min-width: a.$mobile-main) {
+
+    min-height: 100vh;
+    max-width: 50%;
+  }
+
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center left;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #fff, $alpha: .7)
+  }
+
+}

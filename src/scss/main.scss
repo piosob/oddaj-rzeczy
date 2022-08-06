@@ -1,0 +1,11 @@
+@use "./abstract/"as a;
+@use './settings/reset';
+
+
+body {
+  font-family: a.$font-base;
+
+  @media (max-width: a.$mobile-main) {
+    font-size: 14px;
+  }
+}

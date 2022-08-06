@@ -1,0 +1,65 @@
+@use "../../../scss/abstract/"as a;
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  text-align: center;
+  font-size: a.$f40;
+  color: a.$gray;
+}
+
+.img {
+  display: block;
+  margin: 1em auto;
+  max-width: 75%;
+}
+
+.form {
+  position: relative;
+  max-width: 30vw;
+}
+
+.inputArea {
+  background-color: a.$light-gray;
+  padding: 2.5em 3.8em;
+  min-width: 80%;
+  margin: 3em 0 2em 0;
+}
+
+.label {
+  max-width: 100%;
+  display: block;
+  font-size: a.$f16;
+  color: a.$gray;
+
+}
+
+.input {
+  max-width: 100%;
+  padding: 0;
+  background: none;
+}
+
+.buttonsArea {
+  margin-top: 2em;
+  min-width: 130%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-15%);
+  @include a.flex(row, space-between, center);
+
+  button:first-child {
+    border: none;
+  }
+
+  button:last-child {
+    padding: 0.81em 0.93em;
+  }
+
+}

@@ -1,0 +1,34 @@
+@use '../../../scss/abstract/'as a;
+
+.HomeFourSteps-container {
+  margin: 1em 0;
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  @include a.flex(column, center, center);
+  gap: 2em;
+}
+
+.step-icon-container {
+  width: 100%;
+  background-color: a.$light-gray;
+  padding: 1em 0;
+
+}
+
+.step-icon-area {
+  @media (min-width: a.$mobile-main) {
+    margin: 2em auto;
+    gap: 2em;
+    @include a.flex(row, space-between, baseline);
+    max-width: 60%;
+  }
+
+
+}
+
+.button {
+  margin: 1em 0 2em 0;
+  font-size: a.$f36;
+  font-weight: 300;
+  min-height: 108px;
+}

@@ -1,0 +1,12 @@
+@use "../../scss/abstract/"as a;
+
+.container {
+  max-width: 2560px;
+  margin: 0 auto;
+
+  @media (min-width: a.$mobile-main) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+}

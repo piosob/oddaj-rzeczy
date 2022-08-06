@@ -1,0 +1,57 @@
+@use "../../../scss/abstract/"as a;
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1em;
+  overflow: hidden;
+  border: 1px solid black;
+  box-shadow: 8px 8px 15px 0px a.$gray;
+  z-index: 15;
+
+}
+
+.header {
+  background-color: a.$gray;
+  ;
+}
+
+
+.title {
+  padding: 1em 0 1em 1em;
+  color: rgba($color: #fff, $alpha: .8);
+  font-size: a.$f24;
+}
+
+.main {
+  @include a.flex(row, flex-start, center);
+  min-height: 10em;
+  min-width: 30em;
+  max-width: 50em;
+  background-color: rgba($color: #fff, $alpha: .8);
+
+}
+
+.message {
+  padding: 1em;
+
+}
+
+.footer {
+  @include a.flex(row, flex-end, center);
+  padding: 0 1em 2em 0;
+  background-color: rgba($color: #fff, $alpha: .8);
+
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba($color: #000000, $alpha: .8);
+}

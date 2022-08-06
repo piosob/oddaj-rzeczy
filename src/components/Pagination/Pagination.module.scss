@@ -1,0 +1,35 @@
+@use '../../scss/abstract/'as a;
+
+.nav {
+  @include a.flex();
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.pageItem {
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover,
+  &:active {
+    background-color: a.$gray;
+    color: #fff;
+  }
+}
+
+.pageLink {
+  display: block;
+  padding: .5em 1em;
+  font-size: a.$f18;
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  border: 1px solid a.$gray;
+
+}
+
+.dNone {
+  display: none;
+}

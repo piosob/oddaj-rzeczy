@@ -1,0 +1,16 @@
+@use '../../../scss/abstract/'as a;
+
+.HomeThreeColumns {
+  padding: 1em 0;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  background-color: a.$border;
+
+  @media (min-width: a.$mobile-main) {
+    padding: 3em 10em 6em 10em;
+    gap: 6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}

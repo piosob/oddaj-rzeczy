@@ -1,0 +1,43 @@
+@use '../../../scss/abstract/'as a;
+
+.login-btns-container {
+  // grid-column: 10/12;
+  // grid-row: 1/1;
+  // margin-top: 1em;
+  max-width: 100%;
+  align-self: flex-end;
+  font-size: a.$f16;
+  @include a.flex();
+  gap: 2em;
+
+}
+
+.successDesc {
+  color: green;
+}
+
+.button {
+  font-size: a.$f18;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.non-active {
+  border: none;
+}
+
+.active {
+  border: 0.75px solid a.$border;
+}
+
+.btn {
+  padding: 0;
+}
+
+.btn>a {
+  @include a.flex();
+  height: 100%;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  gap: 1em
+}

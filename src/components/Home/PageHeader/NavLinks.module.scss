@@ -1,0 +1,19 @@
+@use '../../../scss/abstract/'as a;
+
+.ul {
+  width: 100%;
+  @include a.flex(row, space-between, center);
+  font-size: a.$f18;
+
+  &>* a {
+    cursor: pointer;
+    padding: .5em;
+    display: block;
+
+  }
+
+}
+
+.active {
+  border: 0.75px solid a.$gray;
+}

@@ -1,0 +1,7 @@
+@use "../../scss/abstract/"as a;
+
+.container {
+  @media (max-width: a.$mobile-main) {
+    padding: 1em;
+  }
+}

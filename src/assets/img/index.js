@@ -1,0 +1,9 @@
+export { default as homeHero } from './Home-Hero-Image.jpg';
+export { default as homeHeroDecoration } from './Decoration.svg';
+export { default as icon1 } from './Icon-1.svg';
+export { default as icon2 } from './Icon-2.svg';
+export { default as icon3 } from './Icon-3.svg';
+export { default as icon4 } from './Icon-4.svg';
+export { default as people } from './People.jpg';
+export { default as signature } from './Signature.svg';
+export { default as contactForm } from './Background-Contact-Form.jpg';

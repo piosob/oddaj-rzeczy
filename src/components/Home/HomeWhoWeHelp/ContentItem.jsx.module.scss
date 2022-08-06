@@ -1,0 +1,28 @@
+@use '../../../scss/abstract/'as a;
+
+.container {
+  margin-top: 1em;
+  @include a.flex(row, space-between, center);
+  color: a.$gray;
+  min-width: 100%;
+  border-bottom: 1px solid a.$gray;
+  font-family: a.$font-alt;
+  padding-bottom: 2em;
+  text-align: left;
+}
+
+.heading {
+  font-size: a.$f26;
+}
+
+.description {
+  max-width: 75%;
+  font-size: a.$f18;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.items-list {
+  min-width: 25%;
+  text-align: right;
+}

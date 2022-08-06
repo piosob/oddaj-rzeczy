@@ -1,0 +1,27 @@
+@use '../../../scss/abstract/'as a;
+
+.container {
+  grid-column: span 1;
+  @include a.flex(column, center, center);
+  gap: 1em;
+  text-align: center;
+}
+
+.heading {
+  font-size: a.$f90;
+  font-weight: 300;
+}
+
+.numberDescription {
+  font-size: a.$f18;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+}
+
+.columnDescription {
+  font-size: a.$f16;
+  letter-spacing: -0.32px;
+  font-family: a.$font-alt;
+  font-weight: 300;
+
+}

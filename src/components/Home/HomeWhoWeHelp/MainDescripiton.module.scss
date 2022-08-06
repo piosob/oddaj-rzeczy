@@ -1,0 +1,13 @@
+@use '../../../scss/abstract/'as a;
+
+.p {
+  @media (min-width: a.$mobile-main) {
+    max-width: 50%;
+  }
+
+  font-size: a.$f22;
+  letter-spacing: 0px;
+  line-height: 1em;
+  margin: 1em 0;
+
+}
