@@ -8,6 +8,8 @@ const Button = (props) => {
     props.onTest && props.onTest();
     props.onLogout && props.onLogout();
     props.onLogoutNavigate && props.onLogoutNavigate();
+    props.onNextClick && props.onNextClick();
+    props.onPrevClick && props.onPrevClick();
   };
 
   return (

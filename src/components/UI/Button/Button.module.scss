@@ -4,19 +4,27 @@
   font: inherit;
   border: 1px solid a.$gray;
   color: a.$gray;
-  padding: 0.25rem 1rem;
   cursor: pointer;
   transition: .3s;
 
-}
+  &>a {
+    @include a.flex();
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+  }
 
+  &>a svg {
+    margin-right: .3em;
+  }
 
-.button:hover,
-.button:active {
-  background-color: a.$gray;
-  color: #fff;
-}
+  &:hover,
+  &:active {
+    background-color: a.$gray;
+    color: #fff;
+  }
 
-.button:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }

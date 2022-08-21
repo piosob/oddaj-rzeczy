@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../../UI/Button/Button";
 import StepIcon from "./StepIcon";
 import {
@@ -40,7 +41,11 @@ const HomeFourSteps = () => {
         </div>
       </div>
       <Button className={classes.button}>
-        <Link to="/logowanie">ODDAJ RZECZY</Link>
+        {/* należy poprawić bo teraz znacznik <a> nie zajmuje całego buttona i trzeba kliknąc dokładnie w tekst */}
+        <Link to="/oddaj-rzeczy">
+          <FontAwesomeIcon icon="fa-solid fa-gifts" />
+          ODDAJ RZECZY
+        </Link>
       </Button>
     </div>
   );

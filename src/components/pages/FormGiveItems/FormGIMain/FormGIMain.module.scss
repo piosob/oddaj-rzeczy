@@ -1,0 +1,46 @@
+@use "../../../../scss/abstract/"as a;
+
+.BG {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container {
+  grid-column: 2/8;
+  min-height: 90vh;
+  margin: 2em 0;
+}
+
+.stepNumber {
+  font-size: a.$f24;
+  font-weight: 300;
+  color: a.$gray;
+}
+
+.heading {
+  font-size: a.$f36;
+  font-weight: 600;
+  color: #000;
+}
+
+.button:first-child {
+  margin-right: 2em;
+}
+
+.button:first-child svg {
+  margin-right: .3em;
+}
+
+.button:last-child svg {
+  margin-left: .3em;
+}
+
+.btnArea {
+  margin-top: 3em;
+}
+
+.button {
+  padding: calc(23em / 24) calc(52em / 24);
+  font-size: a.$f24;
+}

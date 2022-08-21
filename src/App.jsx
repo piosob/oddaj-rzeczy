@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import { LogIn, Register, Logout, FormMain } from "./components/pages";
+import { LogIn, Register, Logout, FormGiveItems } from "./components/pages";
 import { Home } from "./components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,6 @@ library.add(fas);
 
 function App() {
   const authCtx = useContext(AuthContex);
-  console.log(authCtx.isLoggedIn);
   return (
     <BrowserRouter>
       <Layout>
@@ -27,7 +26,11 @@ function App() {
           <Route
             path="/oddaj-rzeczy"
             element={
-              authCtx.isLoggedIn ? <FormMain /> : <Navigate replace to={"/"} />
+              authCtx.isLoggedIn ? (
+                <FormGiveItems />
+              ) : (
+                <Navigate replace to={"/"} />
+              )
             }
           />
           <Route path="*" element={<Navigate replace to={"/"} />} />

@@ -34,7 +34,12 @@ const LoginSection = () => {
         </Button>
       )}
       {authCtx.isLoggedIn && (
-        <Button onLogout={authCtx.onLogOut} onLogoutNavigate={onLogoutNavigate}>
+        <Button
+          className={classes.logoutBtn}
+          onLogout={authCtx.onLogOut}
+          onLogoutNavigate={onLogoutNavigate}
+        >
+          <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" />
           Wyloguj!
         </Button>
       )}

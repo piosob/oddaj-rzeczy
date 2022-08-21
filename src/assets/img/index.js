@@ -7,3 +7,5 @@ export { default as icon4 } from './Icon-4.svg';
 export { default as people } from './People.jpg';
 export { default as signature } from './Signature.svg';
 export { default as contactForm } from './Background-Contact-Form.jpg';
+export { default as formHero } from './Form-Hero-Image.jpg';
+export { default as formBG } from './Background-Form.jpg';

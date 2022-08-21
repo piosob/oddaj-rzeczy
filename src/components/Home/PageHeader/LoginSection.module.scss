@@ -41,3 +41,11 @@
   padding: 0.25rem 1rem;
   gap: 1em
 }
+
+.logoutBtn {
+  padding: 0.25rem 1rem;
+
+  >svg {
+    margin-right: .3em;
+  }
+}

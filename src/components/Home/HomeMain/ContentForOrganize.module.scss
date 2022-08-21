@@ -18,17 +18,16 @@
 }
 
 .btns-actions {
-  @include a.flex(row, space-between, center);
+  @include a.flex(row, space-between, stretch);
   gap: 1em;
 }
 
 .button {
   @media (min-width: a.$mobile-main) {
     font-size: a.$f36;
-    min-height: 108px;
   }
 
-  min-height: 60px;
+  padding: 0;
   font-size: a.$f24;
   width: 50%;
   font-weight: 300;

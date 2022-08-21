@@ -1,0 +1,25 @@
+@use "../../../scss/abstract/"as a;
+
+.BG {
+  grid-column: 1/-1;
+  background-color: a.$border;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container {
+  grid-column: 2/12;
+  margin: 2em 0;
+  max-height: 10vh;
+}
+
+.heading {
+  font-size: a.$f36;
+  color: #000;
+  font-weight: 600;
+}
+
+.description {
+  font-size: a.$f22;
+  color: a.$gray;
+}

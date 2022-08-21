@@ -1,14 +1,13 @@
 @use '../../../scss/abstract/'as a;
 
 .container {
-  min-width: 50%;
   color: a.$gray;
   gap: 2em;
 }
 
 .container,
 .form {
-  @include a.flex(column, flex-start, center);
+  @include a.flex(column, center, center);
 }
 
 .form {
@@ -79,6 +78,10 @@
   font-size: a.$f18;
   font-weight: 300;
   padding: .5em 2em;
+
+  >svg {
+    margin-right: .3em;
+  }
 }
 
 

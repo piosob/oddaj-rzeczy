@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Input } from "../../UI";
 import {
   validateNameInput,
@@ -26,21 +27,21 @@ const formReducer = (state, action) => {
       ...state,
       nameInputValue: action.val,
       formSubmitClick: false,
-      formSentStatus: null,
+      // formSentStatus: null,
     };
   } else if (action.type === "EMAIL_INPUT") {
     return {
       ...state,
       emailInputValue: action.val,
       formSubmitClick: false,
-      formSentStatus: null,
+      // formSentStatus: null,
     };
   } else if (action.type === "MESSAGE_INPUT") {
     return {
       ...state,
       messageInputValue: action.val,
       formSubmitClick: false,
-      formSentStatus: null,
+      // formSentStatus: null,
     };
   } else if (action.type === "FORM_SUBMIT") {
     return {
@@ -70,6 +71,16 @@ const formReducer = (state, action) => {
 const ContactForm = () => {
   const [formState, dispatchForm] = useReducer(formReducer, INITIAL_VALUE);
 
+  // useEffect(() => {
+  // const timeoutId = setTimeout(() => {
+  //   console.log(formState.formSentStatus);
+  //   dispatchForm({
+  //     type: "HIDE_DESC",
+  //   });
+  // }, 2_000);
+  // return () => clearTimeout(timeoutId);
+  // }, [formState.formSentStatus]);
+
   const changeHandler = (event) => {
     const { name, value } = event.target;
     if (name === "name") {
@@ -98,26 +109,32 @@ const ContactForm = () => {
       emailVal: formState.emailInputValue,
       messageVal: formState.messageInputValue,
     });
-    const data = {
-      name: formState.nameInputValue,
-      email: formState.emailInputValue,
-      message: formState.messageInputValue,
-    };
-    // nie powinno pójśc zapytanie na serwer jeśli dane wpisanie w input się nieprawidłowe
-    sendRequest(data, process.env.REACT_APP_CONTACT)
-      .then((result) => {
-        if (result) {
+    if (
+      validateNameInput(formState.nameInputValue) &&
+      validateEmailInput(formState.emailInputValue) &&
+      validateMessageTextArea(formState.messageInputValue)
+    ) {
+      const data = {
+        name: formState.nameInputValue,
+        email: formState.emailInputValue,
+        message: formState.messageInputValue,
+      };
+      sendRequest(data, process.env.REACT_APP_CONTACT)
+        .then((result) => {
+          // console.log(result);
+          if (result) {
+            dispatchForm({
+              type: "END_FETCHING_DATA_OK",
+              val: result.status,
+            });
+          }
+        })
+        .catch((err) => {
           dispatchForm({
-            type: "END_FETCHING_DATA_OK",
-            val: result.status,
+            type: "END_FETCHING_DATA_NOT_OK",
           });
-        }
-      })
-      .catch(() => {
-        dispatchForm({
-          type: "END_FETCHING_DATA_NOT_OK",
         });
-      });
+    }
   };
   return (
     <section className={classes.container}>
@@ -131,7 +148,7 @@ const ContactForm = () => {
       )}
       {formState.formSentStatus === "error" && (
         <p className={classes.errorDescription}>
-          Błąd! Wprowadzono niepoprawne dane, wiadomość nie została wysłana.
+          Błąd! Wiadomość nie została wysłana.
         </p>
       )}
       <form className={classes.form} onSubmit={handleSubmit}>
@@ -194,6 +211,7 @@ const ContactForm = () => {
           )}
         </label>
         <Button className={classes["submit-button"]} type="submit">
+          <FontAwesomeIcon icon="fa-solid fa-message" />
           Wyślij!
         </Button>
       </form>
