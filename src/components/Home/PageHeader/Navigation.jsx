@@ -7,7 +7,8 @@ const Navigation = () => {
   let location = useLocation().pathname;
   return (
     <nav className={classes.nav}>
-      {location === "/" ? <NavLinks /> : <NavLinksOutsideHome />}
+      {/* {location === "/" ? <NavLinks /> : <NavLinksOutsideHome />} */}
+      <NavLinks />
     </nav>
   );
 };

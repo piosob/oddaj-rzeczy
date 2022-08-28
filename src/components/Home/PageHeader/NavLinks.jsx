@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Link as Scroll } from "react-scroll";
 import classes from "./NavLinks.module.scss";
 
 const Navlinks = () => {
+  let location = useLocation().pathname;
+  // let [searchParams, setSearchParams] = useSearchParams({});
+  // setSearchParams({ hello: "world" });
+  // setSearchParams({ cos: "HomeWhoHeHelp" });
+  // console.log(searchParams);
   return (
     <ul className={classes.ul}>
       <li className={classes.active}>
@@ -33,7 +39,7 @@ const Navlinks = () => {
         </Scroll>
       </li>
       <li>
-        <Scroll
+        {/* <Scroll
           activeClass="active"
           to="HomeWhoHeHelp"
           smooth={true}
@@ -42,7 +48,13 @@ const Navlinks = () => {
           delay={100}
         >
           Fundacje i organizacje
-        </Scroll>
+        </Scroll> */}
+        {/* <HashLink smooth to={"#HomeWhoHeHelp"}>
+          Fundacje i organizacje
+        </HashLink> */}
+        <Link to="/" state={{ id: "HomeWhoHeHelp" }}>
+          Fundacje i organizacje
+        </Link>
       </li>
       <li>
         <Scroll

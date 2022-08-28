@@ -7,7 +7,7 @@ const NavLinksOutsideHome = () => {
       <li className={classes.active}>
         <Link to="/">Start</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/#HomeThreeColumns">O co chodzi?</Link>
       </li>
       <li>
@@ -18,7 +18,7 @@ const NavLinksOutsideHome = () => {
       </li>
       <li>
         <Link to="/#HomeContact">Kontakt</Link>
-      </li>
+      </li> */}
     </ul>
   );
 };

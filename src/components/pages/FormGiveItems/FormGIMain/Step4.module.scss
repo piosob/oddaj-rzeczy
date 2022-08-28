@@ -1,0 +1,32 @@
+@use "../../../../scss/abstract/"as a;
+
+.container {
+  @include a.flex(row, space-between, stretch);
+  margin-top: 1em;
+  gap: 4em
+}
+
+.adress,
+.term {
+  flex-basis: 50%;
+  background: #ddd;
+
+}
+
+.adress {}
+
+.heading {
+  font-size: a.$f24;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.label {
+  @include a.flex(row, space-between, center);
+
+  input {
+    max-width: 75%;
+  }
+}
+
+.term {}

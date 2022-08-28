@@ -18,16 +18,18 @@ const FormGIMain = () => {
           {formCtx.formStep !== 1 ? (
             <Button
               className={classes.button}
-              onPrevClick={formCtx.onPrevClick}
+              // onPrevClick={formCtx.onPrevClick}
+              formClickName="prev"
             >
               <FontAwesomeIcon icon="fa-solid fa-angles-left" />
               Wstecz
             </Button>
           ) : null}
-          {formCtx.formStep !== 4 ? (
+          {formCtx.formStep !== 4 || formCtx.step3WhoHelpErrorMessage ? (
             <Button
               className={classes.button}
-              onNextClick={formCtx.onNextClick}
+              // onNextClick={formCtx.onNextClick}
+              formClickName="next"
             >
               Dalej
               <FontAwesomeIcon icon="fa-solid fa-angles-right" />

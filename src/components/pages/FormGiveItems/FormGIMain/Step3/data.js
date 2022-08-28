@@ -1,0 +1,1 @@
+export const helpGroups = ["dzieciom", "samotnym matkom", "bezdomnym", "niepełnosprawnym", "osobom starszym"]

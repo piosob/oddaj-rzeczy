@@ -48,7 +48,11 @@ const HomeWhoWeHelp = () => {
   };
 
   return (
-    <div className={classes["who-we-help-container"]} id="HomeWhoHeHelp">
+    <div
+      className={classes["who-we-help-container"]}
+      id="HomeWhoHeHelp"
+      name="HomeWhoHeHelp"
+    >
       <section className={classes.header}>
         <h3 className={classes.heading}>Komu pomagamy?</h3>
         <img src={homeHeroDecoration} alt="decoration" />

@@ -10,6 +10,7 @@ library.add(fas);
 
 function App() {
   const authCtx = useContext(AuthContex);
+
   return (
     <BrowserRouter>
       <Layout>

@@ -1,0 +1,102 @@
+@use "../../../../../scss/abstract/"as a;
+
+.container {
+  font-size: a.$f24;
+
+}
+
+.dropdownContainer {
+  @include a.flex(column, flex-start, flex-end);
+  max-width: 50%;
+
+}
+
+.panel {
+  width: 100%;
+  @include a.flex(row, space-between, center);
+  gap: 3em;
+  border: 0.75px solid a.$gray;
+  padding: .5em 1em;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover,
+  &:active {
+    background-color: a.$gray;
+    color: #fff;
+  }
+}
+
+.dropdown {
+  margin-top: 1em;
+  width: 100%;
+  cursor: pointer;
+  border: 0.75px solid a.$gray;
+
+
+  li {
+    // transition: .3s;
+    // padding: .5em 0;
+    text-align: center;
+
+
+    &:hover,
+    &:active {
+      background-color: a.$gray;
+      color: #fff;
+    }
+  }
+
+}
+
+.errorMessage {
+  margin-top: 1em;
+  color: red;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.whoHelpHeding {
+  margin-top: 1em;
+  color: #000;
+  font-weight: 600;
+}
+
+.sectionCheckbox {
+  @include a.flex(row, flex-start, stretch);
+  gap: 1em; // 
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.activeCheckbox,
+.defaultCheckbox {
+  flex-basis: content;
+  font-weight: 300;
+  border: 0.75px solid a.$gray;
+  cursor: pointer;
+}
+
+.activeCheckbox {
+  background-color: a.$border;
+}
+
+.defaultCheckbox {
+  background-color: transparent;
+}
+
+.checkbox {
+  display: none;
+}
+
+.inputLabel {
+  padding: 0;
+  font-weight: 600;
+}
+
+.input {
+  margin-top: .5em;
+  background-color: transparent;
+  border: 1px solid a.$gray;
+  padding-left: 1em;
+}

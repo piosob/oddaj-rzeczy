@@ -19,3 +19,15 @@ export const step1RadioData = [
   "książki",
   "Inne"
 ]
+export const step4AdressLabel = [
+  "Ulica",
+  "Miasto",
+  "Kod pocztowy",
+  "Numer telefonu",
+]
+export const step4TermLabel = [
+  "Data",
+  "Godzina",
+  "Uwagi dla kuriera"
+]
+

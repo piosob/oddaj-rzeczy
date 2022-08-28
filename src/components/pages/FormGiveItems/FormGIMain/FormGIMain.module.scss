@@ -4,10 +4,12 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-  grid-column: 2/8;
+  grid-column: 2/7;
   min-height: 90vh;
   margin: 2em 0;
 }

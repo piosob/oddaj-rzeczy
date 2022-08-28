@@ -1,5 +1,6 @@
+import React, { useContext } from "react";
 import { yellowDescription } from "./data";
-
+import FormContex from "../../store/form-contex";
 import classes from "./FormGIHeaderDescription.module.scss";
 
 const setDescription = (number) => {
@@ -19,12 +20,13 @@ const setDescription = (number) => {
 };
 
 const FormGIHeaderDescription = (props) => {
+  const formCtx = useContext(FormContex);
   return (
     <div className={classes.BG}>
       <div className={classes.container}>
         <h4 className={classes.heading}>Ważne!</h4>
         <p className={classes.description}>
-          {setDescription(props.stepNumber)}
+          {setDescription(formCtx.formStep)}
         </p>
       </div>
     </div>
